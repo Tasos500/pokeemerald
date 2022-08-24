@@ -309,7 +309,7 @@ PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 PlayersHouse_1F_Text_GoSetTheClock:
 	.string "ΜΑΜΑ: {PLAYER}.\p"
 	.string "Πήγαινε ρύθμισε το ρολόι\n"
-	.string "στο δωμάτιό σου, {ΗΟΝΕΥ} μου.$"
+	.string "στο δωμάτιό σου, {HONEY} μου.$"
 
 PlayersHouse_1F_Text_OhComeQuickly:
 	.string "ΜΑΜΑ: Ω! {PLAYER}, {PLAYER}!\n"
@@ -346,7 +346,7 @@ PlayersHouse_1F_Text_YouShouldRestABit:
 PlayersHouse_1F_Text_TakeCareHoney:
 	.string "ΜΑΜΑ: Να προσέχεις, {HONEY} μου!$"
 
-PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromΜΑΜΑ:
+PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom:
 	.string "ΜΑΜΑ: Ω; Ο ΜΠΑΜΠΑΣ σου έδωσε αυτό το ΕΜΒΛΗΜΑ;\p"
 	.string "Τότε ορίστε και κάτι από τη ΜΑΜΑ σου!$"
 
@@ -362,7 +362,7 @@ PlayersHouse_1F_Text_IsThatAPokenav:
 	.string "γράφεις και τη μαμά σου;\p"
 	.string "… … …$"
 
-PlayersHouse_1F_Text_RegisteredΜΑΜΑ:
+PlayersHouse_1F_Text_RegisteredMom:
 	.string "Η ΜΑΜΑ εγγράφηκε\n"
 	.string "στο POKéNAV.$"
 
