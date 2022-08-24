@@ -16,6 +16,23 @@ extern const u8 gText_ExpandedPlaceholder_Kyogre[];
 extern const u8 gText_ExpandedPlaceholder_Groudon[];
 extern const u8 gText_ExpandedPlaceholder_Brendan[];
 extern const u8 gText_ExpandedPlaceholder_May[];
+extern const u8 gText_ExpandedPlaceholder_Article_Male[];
+extern const u8 gText_ExpandedPlaceholder_Article_Male_Lower[];
+extern const u8 gText_ExpandedPlaceholder_Article_Female[];
+extern const u8 gText_ExpandedPlaceholder_Article_Female_Lower[];
+extern const u8 gText_ExpandedPlaceholder_Adjective_Male[];
+extern const u8 gText_ExpandedPlaceholder_Adjective_Female[];
+extern const u8 gText_ExpandedPlaceholder_Adjective_Male_Tonos[];
+extern const u8 gText_ExpandedPlaceholder_Adjective_Female_Tonos[];
+extern const u8 gText_ExpandedPlaceholder_Genitive_Male[];
+extern const u8 gText_ExpandedPlaceholder_Genitive_Female[];
+extern const u8 gText_ExpandedPlaceholder_Genitive_Male_Cap[];
+extern const u8 gText_ExpandedPlaceholder_Genitive_Female_Cap[];
+extern const u8 gText_ExpandedPlaceholder_Trainer_Male[];
+extern const u8 gText_ExpandedPlaceholder_Trainer_Female[];
+extern const u8 gText_ExpandedPlaceholder_Rival_Ending_Ni[];
+extern const u8 gText_ExpandedPlaceholder_Honey_Male[];
+extern const u8 gText_ExpandedPlaceholder_Honey_Female[];
 
 extern const u8 gText_FromSpace[];
 

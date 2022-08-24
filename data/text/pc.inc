@@ -1,17 +1,17 @@
 Text_BootUpPC:
-	.string "{PLAYER} booted up the PC.$"
+	.string "{PLAYER_ART} {PLAYER} άνοιξε το PC.$"
 
 gText_WhichPCShouldBeAccessed::
-	.string "Which PC should be accessed?$"
+	.string "Με ποιο PC θα ήθελες να συνδεθείς;$"
 
 gText_AccessedSomeonesPC::
-	.string "Accessed SOMEONE'S PC.$"
+	.string "Συνδέθηκες με το PC ΚΑΠΟΙΟΥ.$"
 
 gText_StorageSystemOpened::
-	.string "POKéMON Storage System opened.$"
+	.string "Το Σύστημα Αποθήκευσης POKéMON άνοιξε.$"
 
 gText_AccessedPlayersPC::
-	.string "Accessed {PLAYER}'s PC.$"
+	.string "Συνδέθηκες με το PC Τ{PLAYER_GEN_CAP} {PLAYER}.$"
 
 gText_AccessedLanettesPC::
-	.string "Accessed LANETTE's PC.$"
+	.string "Συνδέθηκες με το PC ΤΗΣ LANETTE.$"

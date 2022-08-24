@@ -59,7 +59,7 @@ gTrickHouse_Mechadoll_HarborMail::
 	.string "HARBOR MAIL$"
 
 gTrickHouse_Mechadoll_SamePrice::
-	.string "Same price$"
+	.string "Ίδια τιμή$"
 
 gTrickHouse_Mechadoll_60Yen::
 	.string "¥60$"
@@ -68,7 +68,7 @@ gTrickHouse_Mechadoll_55Yen::
 	.string "¥55$"
 
 gTrickHouse_Mechadoll_Nothing::
-	.string "Nothing$"
+	.string "Τίποτα$"
 
 gTrickHouse_Mechadoll_CostMore::
 	.string "They will cost more.$"

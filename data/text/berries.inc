@@ -1,14 +1,14 @@
 PetalburgCity_Gym_Text_GiveEnigmaBerry:
-	.string "DAD: Hi, {PLAYER}!\p"
-	.string "I just received a very rare BERRY.\n"
-	.string "I'd like you to have it.$"
+	.string "ΜΠΑΜΠΑ: Γεια, {PLAYER}!\p"
+	.string "Μόλις έλαβα ένα πολύ σπάνιο ΜΟΥΡΟ.\n"
+	.string "Θα ήθελα να το πάρεις.$"
 
 Route104_Text_PlantBerriesInSoilTakeThis:
-	.string "If you see BERRIES growing in loamy\n"
-	.string "soil, feel free to take them.\p"
-	.string "But make sure you plant a BERRY in the\n"
-	.string "same spot. That's common courtesy.\p"
-	.string "Here, I'll share this with you.$"
+	.string "Αν δεις ΜΟΥΡΑ να φυτρώνουν σε αμμώδες\n"
+	.string "χώμα, μην διστάσεις να τα πάρεις.\p"
+	.string "Αλλά βεβαιώσου να φυτέψεις ΜΟΥΡΟ στο\n"
+	.string "ίδιο σημείο. Είναι κοινή ευγένεια.\p"
+	.string "Ορίστε, θα μοιραστώ αυτό με σένα.$"
 
 Route104_Text_TrainersOftenMakeMonHoldBerries:
 	.string "The way you look, you must be a\n"

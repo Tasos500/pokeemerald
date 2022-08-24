@@ -1,51 +1,51 @@
 gText_WouldYouLikeToRestYourPkmn::
-	.string "Hello, and welcome to\n"
-	.string "the POKéMON CENTER.\p"
-	.string "We restore your tired POKéMON\n"
-	.string "to full health.\p"
-	.string "Would you like to rest your POKéMON?$"
+	.string "Γεια σας, και καλώς ήρθατε\n"
+	.string "στο ΚΕΝΤΡΟ POKéMON.\p"
+	.string "Επαναφέρουμε τα κουρασμένα σας\n"
+	.string "POKéMON σε πλήρη υγεία.\p"
+	.string "Θα θέλατε να αναρρώσετε τα POKéMON σας;$"
 
 gText_IllTakeYourPkmn::
-	.string "Okay, I'll take your POKéMON\n"
-	.string "for a few seconds.$"
+	.string "Εντάξει, θα πάρω τα POKéMON\n"
+	.string "σας για λίγα δευτερόλεπτα.$"
 
 gText_RestoredPkmnToFullHealth::
-	.string "Thank you for waiting.\p"
-	.string "We've restored your POKéMON\n"
-	.string "to full health.$"
+	.string "Σας ευχαριστώ για την αναμονή.\p"
+	.string "Επαναφέραμε τα POKéMON σας\n"
+	.string "σε πλήρη υγεία.$"
 
 gText_WeHopeToSeeYouAgain::
-	.string "We hope to see you again!$"
+	.string "Ελπίζουμε να σας ξαναδούμε!$"
 
 gText_WelcomeCutShort::
-	.string "Hello, and welcome to\n"
-	.string "the POKéMON CENTER.\p"
-	.string "We restore your tired POKéMON\n"
-	.string "to full health.\p"
-	.string "Would you like to…$"
+	.string "Γεια σας, και καλώς ήρθατε\n"
+	.string "στο ΚΕΝΤΡΟ POKéMON.\p"
+	.string "Επαναφέρουμε τα κουρασμένα σας\n"
+	.string "POKéMON σε πλήρη υγεία.\p"
+	.string "Θα θέλατε να …$"
 
 gText_NoticesGoldCard::
-	.string "Th-that card…\n"
-	.string "Could it be… The GOLD CARD?!\p"
-	.string "Oh, the gold color is brilliant!\n"
-	.string "The four stars seem to sparkle!\p"
-	.string "I've seen several TRAINERS with\n"
-	.string "a SILVER CARD before, but, {PLAYER},\l"
-	.string "you're the first TRAINER I've ever\l"
-	.string "seen with a GOLD CARD!\p"
-	.string "Okay, {PLAYER}, please allow me\n"
-	.string "the honor of resting your POKéMON!$"
+	.string "Α-Αυτή η κάρτα…\n"
+	.string "Μήπως είναι… η ΧΡΥΣΗ ΚΑΡΤΑ;!\p"
+	.string "Ω, το χρυσό της χρώμα είναι θαυμάσιο!\n"
+	.string "Τα τέσσερα αστέρια αστράφτουν λαμπρά!\p"
+	.string "Έχω δει πολλούς ΕΚΠΑΙΔΕΥΤΕΣ με\n"
+	.string "ΑΣΗΜΕΝΙΑ ΚΑΡΤΑ, αλλά, {PLAYER},\l"
+	.string "είσαι {PLAYER_ART_LOWER} πρώτ{PLAYER_ADJ} {TRAINER} που έχω\l"
+	.string "δει με ΧΡΥΣΗ ΚΑΡΤΑ!\p"
+	.string "Εντάξει, {PLAYER}, δώσε μου παρακαλώ\n"
+	.string "την τιμή να αναρρώσω τα POKéMON σου!$"
 
 gText_YouWantTheUsual::
-	.string "I'm delighted to see you, {PLAYER}!\n"
-	.string "You want the usual, am I right?$"
+	.string "Χαίρομαι που σε βλέπω, {PLAYER}!\n"
+	.string "Θες το συνηθισμένο, σωστά;$"
 
 gText_IllTakeYourPkmn2::
-	.string "Okay, I'll take your POKéMON\n"
-	.string "for a few seconds.$"
+	.string "Εντάξει, θα πάρω τα POKéMON\n"
+	.string "σου για λίγα δευτερόλεπτα.$"
 
 gText_ThankYouForWaiting::
-	.string "Thank you for waiting.$"
+	.string "Σε ευχαριστώ για την αναμονή.$"
 
 gText_WeHopeToSeeYouAgain2::
-	.string "We hope to see you again!$"
+	.string "Ελπίζω να σε ξαναδώ!$"

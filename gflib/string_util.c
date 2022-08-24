@@ -453,6 +453,101 @@ static const u8 *ExpandPlaceholder_KunChan(void)
         return gText_ExpandedPlaceholder_Chan;
 }
 
+static const u8 *ExpandPlaceholder_Player_Article(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Article_Male;
+    else
+        return gText_ExpandedPlaceholder_Article_Female;
+}
+
+static const u8 *ExpandPlaceholder_Player_Article_Lower(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Article_Male_Lower;
+    else
+        return gText_ExpandedPlaceholder_Article_Female_Lower;
+}
+
+static const u8 *ExpandPlaceholder_Rival_Article(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Article_Female;
+    else
+        return gText_ExpandedPlaceholder_Article_Male;
+}
+
+static const u8 *ExpandPlaceholder_Rival_Article_Lower(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Article_Female_Lower;
+    else
+        return gText_ExpandedPlaceholder_Article_Male_Lower;
+}
+
+static const u8 *ExpandPlaceholder_Player_Adjective(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Adjective_Male;
+    else
+        return gText_ExpandedPlaceholder_Adjective_Female;
+}
+
+static const u8 *ExpandPlaceholder_Player_Adjective_Tonos(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Adjective_Male_Tonos;
+    else
+        return gText_ExpandedPlaceholder_Adjective_Female_Tonos;
+}
+
+static const u8 *ExpandPlaceholder_Player_Genitive(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Genitive_Male;
+    else
+        return gText_ExpandedPlaceholder_Genitive_Female;
+}
+static const u8 *ExpandPlaceholder_Player_Genitive_Cap(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Genitive_Male_Cap;
+    else
+        return gText_ExpandedPlaceholder_Genitive_Female_Cap;
+}
+
+static const u8 *ExpandPlaceholder_Rival_Genitive(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Genitive_Female;
+    else
+        return gText_ExpandedPlaceholder_Genitive_Male;
+}
+
+static const u8 *ExpandPlaceholder_Trainer(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Trainer_Male;
+    else
+        return gText_ExpandedPlaceholder_Trainer_Female;
+}
+
+static const u8 *ExpandPlaceholder_Honey(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_Honey_Male;
+    else
+        return gText_ExpandedPlaceholder_Honey_Female;
+}
+
+static const u8 *ExpandPlaceholder_Ending_Ni_Rival(void)
+{
+    if (gSaveBlock2Ptr->playerGender != MALE)
+        return gText_ExpandedPlaceholder_Rival_Ending_Ni;
+    else
+        return gText_ExpandedPlaceholder_Empty;
+}
+
 static const u8 *ExpandPlaceholder_RivalName(void)
 {
     if (gSaveBlock2Ptr->playerGender == MALE)
@@ -460,6 +555,7 @@ static const u8 *ExpandPlaceholder_RivalName(void)
     else
         return gText_ExpandedPlaceholder_Brendan;
 }
+
 
 static const u8 *ExpandPlaceholder_Version(void)
 {
@@ -502,20 +598,32 @@ const u8 *GetExpandedPlaceholder(u32 id)
 
     static const ExpandPlaceholderFunc funcs[] =
     {
-        [PLACEHOLDER_ID_UNKNOWN]      = ExpandPlaceholder_UnknownStringVar,
-        [PLACEHOLDER_ID_PLAYER]       = ExpandPlaceholder_PlayerName,
-        [PLACEHOLDER_ID_STRING_VAR_1] = ExpandPlaceholder_StringVar1,
-        [PLACEHOLDER_ID_STRING_VAR_2] = ExpandPlaceholder_StringVar2,
-        [PLACEHOLDER_ID_STRING_VAR_3] = ExpandPlaceholder_StringVar3,
-        [PLACEHOLDER_ID_KUN]          = ExpandPlaceholder_KunChan,
-        [PLACEHOLDER_ID_RIVAL]        = ExpandPlaceholder_RivalName,
-        [PLACEHOLDER_ID_VERSION]      = ExpandPlaceholder_Version,
-        [PLACEHOLDER_ID_AQUA]         = ExpandPlaceholder_Aqua,
-        [PLACEHOLDER_ID_MAGMA]        = ExpandPlaceholder_Magma,
-        [PLACEHOLDER_ID_ARCHIE]       = ExpandPlaceholder_Archie,
-        [PLACEHOLDER_ID_MAXIE]        = ExpandPlaceholder_Maxie,
-        [PLACEHOLDER_ID_KYOGRE]       = ExpandPlaceholder_Kyogre,
-        [PLACEHOLDER_ID_GROUDON]      = ExpandPlaceholder_Groudon,
+        [PLACEHOLDER_ID_UNKNOWN]             = ExpandPlaceholder_UnknownStringVar,
+        [PLACEHOLDER_ID_PLAYER]              = ExpandPlaceholder_PlayerName,
+        [PLACEHOLDER_ID_STRING_VAR_1]        = ExpandPlaceholder_StringVar1,
+        [PLACEHOLDER_ID_STRING_VAR_2]        = ExpandPlaceholder_StringVar2,
+        [PLACEHOLDER_ID_STRING_VAR_3]        = ExpandPlaceholder_StringVar3,
+        [PLACEHOLDER_ID_KUN]                 = ExpandPlaceholder_KunChan,
+        [PLACEHOLDER_ID_RIVAL]               = ExpandPlaceholder_RivalName,
+        [PLACEHOLDER_ID_VERSION]             = ExpandPlaceholder_Version,
+        [PLACEHOLDER_ID_AQUA]                = ExpandPlaceholder_Aqua,
+        [PLACEHOLDER_ID_MAGMA]               = ExpandPlaceholder_Magma,
+        [PLACEHOLDER_ID_ARCHIE]              = ExpandPlaceholder_Archie,
+        [PLACEHOLDER_ID_MAXIE]               = ExpandPlaceholder_Maxie,
+        [PLACEHOLDER_ID_KYOGRE]              = ExpandPlaceholder_Kyogre,
+        [PLACEHOLDER_ID_GROUDON]             = ExpandPlaceholder_Groudon,
+		[PLACEHOLDER_ID_PLAYER_ART]          = ExpandPlaceholder_Player_Article,
+		[PLACEHOLDER_ID_PLAYER_ART_LOWER]    = ExpandPlaceholder_Player_Article_Lower,
+		[PLACEHOLDER_ID_RIVAL_ART]           = ExpandPlaceholder_Rival_Article,
+		[PLACEHOLDER_ID_RIVAL_ART_LOWER]     = ExpandPlaceholder_Rival_Article_Lower,
+		[PLACEHOLDER_ID_PLAYER_ADJ]          = ExpandPlaceholder_Player_Adjective,
+		[PLACEHOLDER_ID_PLAYER_ADJ_TONOS]    = ExpandPlaceholder_Player_Adjective_Tonos,
+		[PLACEHOLDER_ID_PLAYER_GEN]          = ExpandPlaceholder_Player_Genitive,
+		[PLACEHOLDER_ID_PLAYER_GEN_CAP]      = ExpandPlaceholder_Player_Genitive_Cap,
+		[PLACEHOLDER_ID_RIVAL_GEN]           = ExpandPlaceholder_Rival_Genitive,
+		[PLACEHOLDER_ID_TRAINER]             = ExpandPlaceholder_Trainer,
+		[PLACEHOLDER_ID_ENDING_NI_RIVAL]     = ExpandPlaceholder_Ending_Ni_Rival,
+		[PLACEHOLDER_ID_HONEY]               = ExpandPlaceholder_Honey,
     };
 
     if (id >= ARRAY_COUNT(funcs))
