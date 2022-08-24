@@ -53,37 +53,37 @@ EWRAM_DATA struct BattleMsgData *gBattleMsgDataPtr = NULL;
 // todo: make some of those names less vague: attacker/target vs pkmn, etc.
 
 static const u8 sText_Trainer1LoseText[] = _("{B_TRAINER1_LOSE_TEXT}");
-static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} gained{B_BUFF2}\n{B_BUFF3} EXP. Points!\p");
+static const u8 sText_PkmnGainedEXP[] = _("Το {B_BUFF1} έλαβε{B_BUFF2}\n{B_BUFF3} Πόντους ΕΜΠ.!\p");
 static const u8 sText_EmptyString4[] = _("");
-static const u8 sText_ABoosted[] = _(" a boosted");
-static const u8 sText_PkmnGrewToLv[] = _("{B_BUFF1} grew to\nLV. {B_BUFF2}!{WAIT_SE}\p");
-static const u8 sText_PkmnLearnedMove[] = _("{B_BUFF1} learned\n{B_BUFF2}!{WAIT_SE}\p");
-static const u8 sText_TryToLearnMove1[] = _("{B_BUFF1} is trying to\nlearn {B_BUFF2}.\p");
-static const u8 sText_TryToLearnMove2[] = _("But, {B_BUFF1} can't learn\nmore than four moves.\p");
-static const u8 sText_TryToLearnMove3[] = _("Delete a move to make\nroom for {B_BUFF2}?");
-static const u8 sText_PkmnForgotMove[] = _("{B_BUFF1} forgot\n{B_BUFF2}.\p");
-static const u8 sText_StopLearningMove[] = _("{PAUSE 32}Stop learning\n{B_BUFF2}?");
-static const u8 sText_DidNotLearnMove[] = _("{B_BUFF1} did not learn\n{B_BUFF2}.\p");
-static const u8 sText_UseNextPkmn[] = _("Use next POKéMON?");
-static const u8 sText_AttackMissed[] = _("{B_ATK_NAME_WITH_PREFIX}'s\nattack missed!");
-static const u8 sText_PkmnProtectedItself[] = _("{B_DEF_NAME_WITH_PREFIX}\nprotected itself!");
-static const u8 sText_AvoidedDamage[] = _("{B_DEF_NAME_WITH_PREFIX} avoided\ndamage with {B_DEF_ABILITY}!");
-static const u8 sText_PkmnMakesGroundMiss[] = _("{B_DEF_NAME_WITH_PREFIX} makes GROUND\nmoves miss with {B_DEF_ABILITY}!");
-static const u8 sText_PkmnAvoidedAttack[] = _("{B_DEF_NAME_WITH_PREFIX} avoided\nthe attack!");
-static const u8 sText_ItDoesntAffect[] = _("It doesn't affect\n{B_DEF_NAME_WITH_PREFIX}…");
-static const u8 sText_AttackerFainted[] = _("{B_ATK_NAME_WITH_PREFIX}\nfainted!\p");
-static const u8 sText_TargetFainted[] = _("{B_DEF_NAME_WITH_PREFIX}\nfainted!\p");
-static const u8 sText_PlayerGotMoney[] = _("{B_PLAYER_NAME} got ¥{B_BUFF1}\nfor winning!\p");
-static const u8 sText_PlayerWhiteout[] = _("{B_PLAYER_NAME} is out of\nusable POKéMON!\p");
-static const u8 sText_PlayerWhiteout2[] = _("{B_PLAYER_NAME} whited out!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PreventsEscape[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} prevents\nescape with {B_SCR_ACTIVE_ABILITY}!\p");
-static const u8 sText_CantEscape2[] = _("Can't escape!\p");
+static const u8 sText_ABoosted[] = _(" ενισχυμένα");
+static const u8 sText_PkmnGrewToLv[] = _("Το {B_BUFF1} ανέβηκε στο\nΕΠ. {B_BUFF2}!{WAIT_SE}\p");
+static const u8 sText_PkmnLearnedMove[] = _("Το {B_BUFF1} έμαθε\n{B_BUFF2}!{WAIT_SE}\p");
+static const u8 sText_TryToLearnMove1[] = _("Το {B_BUFF1} προσπαθεί να\nμάθει {B_BUFF2}.\p");
+static const u8 sText_TryToLearnMove2[] = _("Όμως, το {B_BUFF1} δεν μπορεί\nνα μάθει πάνω από 4 κινήσεις.\p");
+static const u8 sText_TryToLearnMove3[] = _("Να διαγραφεί μια κίνηση για να\nκάνει χώρο για {B_BUFF2}?");
+static const u8 sText_PkmnForgotMove[] = _("{B_BUFF1} ξέχασε\n{B_BUFF2}.\p");
+static const u8 sText_StopLearningMove[] = _("{PAUSE 32}Να σταματήσει να μάθει\n{B_BUFF2}?");
+static const u8 sText_DidNotLearnMove[] = _("Το {B_BUFF1} δεν έμαθε\n{B_BUFF2}.\p");
+static const u8 sText_UseNextPkmn[] = _("Θα χρησιμοποιήσεις επόμενο POKéMON;");
+static const u8 sText_AttackMissed[] = _("Η επίθεση του\n{B_ATK_NAME_WITH_PREFIX} αστόχησε!");
+static const u8 sText_PkmnProtectedItself[] = _("Το {B_DEF_NAME_WITH_PREFIX}\nπροστατεύτηκε!");
+static const u8 sText_AvoidedDamage[] = _("Το {B_DEF_NAME_WITH_PREFIX} απέφυγε\nζημιά με {B_DEF_ABILITY}!");
+static const u8 sText_PkmnMakesGroundMiss[] = _("Το {B_DEF_NAME_WITH_PREFIX} αποφεύγει\nτις κινήσεις ΕΔΑΦΟΥΣ με {B_DEF_ABILITY}!");
+static const u8 sText_PkmnAvoidedAttack[] = _("Το {B_DEF_NAME_WITH_PREFIX} απέφυγε\nτην επίθεση!");
+static const u8 sText_ItDoesntAffect[] = _("Δεν επηρεάζει το\n{B_DEF_NAME_WITH_PREFIX}…");
+static const u8 sText_AttackerFainted[] = _("Το {B_ATK_NAME_WITH_PREFIX}\nλιποθύμησε!\p");
+static const u8 sText_TargetFainted[] = _("Το {B_DEF_NAME_WITH_PREFIX}\nλιποθύμησε!\p");
+static const u8 sText_PlayerGotMoney[] = _("{B_PLAYER_NOM} {B_PLAYER_NAME} έλαβε ¥{B_BUFF1}\nως έπαθλο!\p");
+static const u8 sText_PlayerWhiteout[] = _("{B_PLAYER_NOM} {B_PLAYER_NAME} δεν έχει\nάλλα χρήσιμα POKéMON!\p");
+static const u8 sText_PlayerWhiteout2[] = _("{B_PLAYER_NOM} {B_PLAYER_NAME}\nέχασε τις αισθήσεις {B_PLAYER_GEN}!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PreventsEscape[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} αποτρέπει\nτη διαφυγή με {B_SCR_ACTIVE_ABILITY}!\p");
+static const u8 sText_CantEscape2[] = _("Δεν μπορεί να ξεφύγει!\p");
 static const u8 sText_AttackerCantEscape[] = _("{B_ATK_NAME_WITH_PREFIX} can't escape!");
-static const u8 sText_HitXTimes[] = _("Hit {B_BUFF1} time(s)!");
-static const u8 sText_PkmnFellAsleep[] = _("{B_EFF_NAME_WITH_PREFIX}\nfell asleep!");
-static const u8 sText_PkmnMadeSleep[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade {B_EFF_NAME_WITH_PREFIX} sleep!");
-static const u8 sText_PkmnAlreadyAsleep[] = _("{B_DEF_NAME_WITH_PREFIX} is\nalready asleep!");
-static const u8 sText_PkmnAlreadyAsleep2[] = _("{B_ATK_NAME_WITH_PREFIX} is\nalready asleep!");
+static const u8 sText_HitXTimes[] = _("Χτύπησε {B_BUFF1} φορά/ές!");
+static const u8 sText_PkmnFellAsleep[] = _("Το {B_EFF_NAME_WITH_PREFIX}\nαποκοιμήθηκε!");
+static const u8 sText_PkmnMadeSleep[] = _("Το {B_SCR_ACTIVE_ABILITY} του {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nαποκοίμησε το {B_EFF_NAME_WITH_PREFIX}!");
+static const u8 sText_PkmnAlreadyAsleep[] = _("Το {B_DEF_NAME_WITH_PREFIX}\nήδη κοιμάται!");
+static const u8 sText_PkmnAlreadyAsleep2[] = _("Το {B_ATK_NAME_WITH_PREFIX}\nήδη κοιμάται!");
 static const u8 sText_PkmnWasntAffected[] = _("{B_DEF_NAME_WITH_PREFIX}\nwasn't affected!");
 static const u8 sText_PkmnWasPoisoned[] = _("{B_EFF_NAME_WITH_PREFIX}\nwas poisoned!");
 static const u8 sText_PkmnPoisonedBy[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\npoisoned {B_EFF_NAME_WITH_PREFIX}!");
@@ -376,13 +376,13 @@ static const u8 sText_PkmnCuriousAboutX[] = _("{B_OPPONENT_MON1_NAME} is curious
 static const u8 sText_PkmnEnthralledByX[] = _("{B_OPPONENT_MON1_NAME} is enthralled by\nthe {B_BUFF1}!");
 static const u8 sText_PkmnIgnoredX[] = _("{B_OPPONENT_MON1_NAME} completely ignored\nthe {B_BUFF1}!");
 static const u8 sText_ThrewPokeblockAtPkmn[] = _("{B_PLAYER_NAME} threw a {POKEBLOCK}\nat the {B_OPPONENT_MON1_NAME}!");
-static const u8 sText_OutOfSafariBalls[] = _("{PLAY_SE SE_DING_DONG}ANNOUNCER: You're out of\nSAFARI BALLS! Game over!\p");
+static const u8 sText_OutOfSafariBalls[] = _("{PLAY_SE SE_DING_DONG}ΕΚΦΩΝΗΤΗΣ: Σου τελείωσαν οι\nSAFARI BALL! Τέλος παιχνιδιού!\p");
 static const u8 sText_OpponentMon1Appeared[] = _("{B_OPPONENT_MON1_NAME} appeared!\p");
-static const u8 sText_WildPkmnAppeared[] = _("Wild {B_OPPONENT_MON1_NAME} appeared!\p");
-static const u8 sText_LegendaryPkmnAppeared[] = _("Wild {B_OPPONENT_MON1_NAME} appeared!\p");
-static const u8 sText_WildPkmnAppearedPause[] = _("Wild {B_OPPONENT_MON1_NAME} appeared!{PAUSE 127}");
-static const u8 sText_TwoWildPkmnAppeared[] = _("Wild {B_OPPONENT_MON1_NAME} and\n{B_OPPONENT_MON2_NAME} appeared!\p");
-static const u8 sText_Trainer1WantsToBattle[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nwould like to battle!\p");
+static const u8 sText_WildPkmnAppeared[] = _("Ένα άγριο {B_OPPONENT_MON1_NAME} εμφανίστηκε!\p");
+static const u8 sText_LegendaryPkmnAppeared[] = _("Το άγριο {B_OPPONENT_MON1_NAME} εμφανίστηκε!\p");
+static const u8 sText_WildPkmnAppearedPause[] = _("Ένα άγριο {B_OPPONENT_MON1_NAME} εμφανίστηκε!{PAUSE 127}");
+static const u8 sText_TwoWildPkmnAppeared[] = _("Άγρια {B_OPPONENT_MON1_NAME} και\n{B_OPPONENT_MON2_NAME} εμφανίστηκαν!\p");
+static const u8 sText_Trainer1WantsToBattle[] = _("{B_TRAINER1_NOM} {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nσε προκαλεί σε μάχη!\p");
 static const u8 sText_LinkTrainerWantsToBattle[] = _("{B_LINK_OPPONENT1_NAME}\nwants to battle!");
 static const u8 sText_TwoLinkTrainersWantToBattle[] = _("{B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}\nwant to battle!");
 static const u8 sText_Trainer1SentOutPkmn[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME} sent\nout {B_OPPONENT_MON1_NAME}!");
@@ -430,6 +430,13 @@ static const u8 sText_SpAtk2[] = _("SP. ATK");
 static const u8 sText_SpDef2[] = _("SP. DEF");
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
+static const u8 sText_Nominative_Female[] = _("Η");
+static const u8 sText_Nominative_Male[] = _("Ο");
+static const u8 sText_Genitive_Female[] = _("της");
+static const u8 sText_Genitive_Male[] = _("του");
+static const u8 sText_Accusative_Female[] = _("τη");
+static const u8 sText_Accusative_Female_Ni[] = _("την");
+static const u8 sText_Accusative_Male[] = _("τον");
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -2625,6 +2632,12 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 else
                     toCpy = gTrainerClassNames[gTrainers[gTrainerBattleOpponent_A].trainerClass];
                 break;
+			case B_TXT_TRAINER1_NOMINATIVE: // trainer nominative pronouns
+				if (gTrainers[gTrainerBattleOpponent_A].encounterMusic_gender & F_TRAINER_FEMALE)
+					toCpy = sText_Nominative_Female;
+				else
+					toCpy = sText_Nominative_Male;
+				break;
             case B_TXT_TRAINER1_NAME: // trainer1 name
                 if (gBattleTypeFlags & BATTLE_TYPE_SECRET_BASE)
                 {
@@ -2669,20 +2682,68 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
             case B_TXT_LINK_PARTNER_NAME: // link partner name
                 toCpy = gLinkPlayers[GetBattlerMultiplayerId(BATTLE_PARTNER(gLinkPlayers[multiplayerId].id))].name;
                 break;
+			case B_TXT_LINK_PARTNER_NOMINATIVE: // link partner nominative pronouns
+				if (gLinkPlayers[GetBattlerMultiplayerId(BATTLE_PARTNER(gLinkPlayers[multiplayerId].id))].gender & 0x01)
+					toCpy = sText_Nominative_Female;
+				else
+					toCpy = sText_Nominative_Male;
+				break;
             case B_TXT_LINK_OPPONENT1_NAME: // link opponent 1 name
                 toCpy = gLinkPlayers[GetBattlerMultiplayerId(BATTLE_OPPOSITE(gLinkPlayers[multiplayerId].id))].name;
                 break;
+				case B_TXT_LINK_OPPONENT1_NOMINATIVE: // link opponent 2 nominative pronouns
+				if (gLinkPlayers[GetBattlerMultiplayerId(BATTLE_OPPOSITE(gLinkPlayers[multiplayerId].id))].gender & 0x01)
+					toCpy = sText_Nominative_Female;
+				else
+					toCpy = sText_Nominative_Male;
+				break;
             case B_TXT_LINK_OPPONENT2_NAME: // link opponent 2 name
                 toCpy = gLinkPlayers[GetBattlerMultiplayerId(BATTLE_PARTNER(BATTLE_OPPOSITE(gLinkPlayers[multiplayerId].id)))].name;
                 break;
+			case B_TXT_LINK_OPPONENT2_NOMINATIVE: // link opponent 2 nominative pronouns
+				if (gLinkPlayers[GetBattlerMultiplayerId(BATTLE_PARTNER(BATTLE_OPPOSITE(gLinkPlayers[multiplayerId].id)))].gender & 0x01)
+					toCpy = sText_Nominative_Female;
+				else
+					toCpy = sText_Nominative_Male;
+				break;
             case B_TXT_LINK_SCR_TRAINER_NAME: // link scripting active name
                 toCpy = gLinkPlayers[GetBattlerMultiplayerId(gBattleScripting.battler)].name;
                 break;
+			case B_TXT_LINK_SCR_TRAINER_NOMINATIVE: // link scripting active nominative pronouns
+				if (gLinkPlayers[GetBattlerMultiplayerId(gBattleScripting.battler)].gender & 0x01)
+					toCpy = sText_Nominative_Female;
+				else
+					toCpy = sText_Nominative_Male;
+				break;
             case B_TXT_PLAYER_NAME: // player name
                 if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
                     toCpy = gLinkPlayers[0].name;
                 else
                     toCpy = gSaveBlock2Ptr->playerName;
+                break;
+			case B_TXT_PLAYER_NOMINATIVE: // player nominative pronouns
+				if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
+                    if (gLinkPlayers[0].gender & 0x01)
+						toCpy = sText_Nominative_Female;
+					else
+						toCpy = sText_Nominative_Male;
+                else
+					if (gSaveBlock2Ptr->playerGender != MALE)
+						toCpy = sText_Nominative_Female;
+					else
+						toCpy = sText_Nominative_Male;
+                break;
+			case B_TXT_PLAYER_GENITIVE: // player genitive pronouns
+				if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
+                    if (gLinkPlayers[0].gender & 0x01)
+						toCpy = sText_Genitive_Female;
+					else
+						toCpy = sText_Genitive_Male;
+                else
+					if (gSaveBlock2Ptr->playerGender != MALE)
+						toCpy = sText_Genitive_Female;
+					else
+						toCpy = sText_Genitive_Male;
                 break;
             case B_TXT_TRAINER1_LOSE_TEXT: // trainerA lose text
                 if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
@@ -2765,6 +2826,12 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 else
                     toCpy = gTrainerClassNames[gTrainers[gTrainerBattleOpponent_B].trainerClass];
                 break;
+			case B_TXT_TRAINER2_NOMINATIVE: // trainer nominative pronouns
+				if (gTrainers[gTrainerBattleOpponent_B].encounterMusic_gender & F_TRAINER_FEMALE)
+					toCpy = sText_Nominative_Female;
+				else
+					toCpy = sText_Nominative_Male;
+				break;
             case B_TXT_TRAINER2_NAME:
                 if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 {
