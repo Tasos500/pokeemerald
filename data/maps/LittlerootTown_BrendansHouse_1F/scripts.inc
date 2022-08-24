@@ -316,8 +316,8 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "Βιάσου! Έλα γρήγορα!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "ΜΑΜΑ: Κοίτα! Είναι το ΓΥΜΝΑΣΤΗΡΙΟ PETALBURG!\n"
-	.string "Ίσως δείξουν τον ΜΠΑΜΠΑ!$"
+	.string "ΜΑΜΑ: Κοίτα! Είναι το ΓΥΜΝΑΣΤΗΡΙΟ\n"
+	.string "PETALBURG! Ίσως δείξουν τον ΜΠΑΜΠΑ!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
 	.string "ΜΑΜΑ: Ω… Τελείωσε.\p"
@@ -374,7 +374,7 @@ PlayersHouse_1F_Text_Vigoroth2:
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
 	.string "ΔΗΜΟΣΙΟΓΡΑΦΟΣ: …Σας φέραμε αυτό το\n"
-	.string "ρεπορτάζ μπροστά από το ΓΥΜΝΑΣΤΗΡΙΟ PETALBURG.$"
+	.string "ρεπορτάζ από το ΓΥΜΝ. PETALBURG.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "Παίζει μια ταινία στην τηλεόραση.\p"
