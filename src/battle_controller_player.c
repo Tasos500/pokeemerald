@@ -98,6 +98,8 @@ static void HandleInputChooseTarget(void);
 static void HandleInputChooseMove(void);
 static void MoveSelectionCreateCursorAt(u8, u8);
 static void MoveSelectionDestroyCursorAt(u8);
+static void MoveSelectionShiftNameDown(void);
+static void MoveSelectionShiftNameUp(void);
 static void MoveSelectionDisplayPpNumber(void);
 static void MoveSelectionDisplayPpString(void);
 static void MoveSelectionDisplayMoveType(void);
@@ -119,6 +121,7 @@ static void DoSwitchOutAnimation(void);
 static void PlayerDoMoveAnimation(void);
 static void Task_StartSendOutAnim(u8);
 static void EndDrawPartyStatusSummary(void);
+static int DebugShiftMove;
 
 static void (*const sPlayerBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
 {
@@ -612,6 +615,16 @@ static void HandleInputChooseMove(void)
             gBattlerControllerFuncs[gActiveBattler] = HandleMoveSwitching;
         }
     }
+	else if (JOY_NEW(L_BUTTON))
+	{
+		PlaySE(SE_SELECT);
+		MoveSelectionShiftNameDown();
+	}
+	else if (JOY_NEW(R_BUTTON))
+	{
+		PlaySE(SE_SELECT);
+		MoveSelectionShiftNameUp();
+	}
 }
 
 static u32 HandleMoveInputUnused(void)
@@ -1458,6 +1471,7 @@ static void MoveSelectionDisplayMoveNames(void)
     s32 i;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
     gNumberOfMovesToChoose = 0;
+	DebugShiftMove = moveInfo->moves[0];
 
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
@@ -1468,6 +1482,24 @@ static void MoveSelectionDisplayMoveNames(void)
         if (moveInfo->moves[i] != MOVE_NONE)
             gNumberOfMovesToChoose++;
     }
+}
+
+static void MoveSelectionShiftNameDown(void)
+{
+	s32 i = 0;
+	struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+	DebugShiftMove--;
+    StringCopy(gDisplayedStringBattle, gMoveNames[DebugShiftMove]);
+    BattlePutTextOnWindow(gDisplayedStringBattle, i + B_WIN_MOVE_NAME_1);
+}
+
+static void MoveSelectionShiftNameUp(void)
+{
+	s32 i = 0;
+	struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+	DebugShiftMove++;
+    StringCopy(gDisplayedStringBattle, gMoveNames[DebugShiftMove]);
+    BattlePutTextOnWindow(gDisplayedStringBattle, i + B_WIN_MOVE_NAME_1);
 }
 
 static void MoveSelectionDisplayPpString(void)
