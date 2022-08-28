@@ -912,13 +912,13 @@ LittlerootTown_EventScript_GiveRunningShoes::
 LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "ΜΑΜΑ: {PLAYER}, φτάσαμε, {HONEY} μου!\p"
 	.string "Θα είσαι κουρασμέν{PLAYER_ADJ} μετά το ταξίδι\n"
-	.string "μέσα στο φορτηγό μετακόμισης.\p"
+	.string "μέσα στο φορτηγό της μεταφορικής.\p"
 	.string "Λοιπόν, αυτή είναι η ΠΟΛΗ LITTLEROOT.\p"
 	.string "Πως σου φαίνεται;\n"
 	.string "Αυτό είναι το νέο μας σπίτι!\p"
-	.string "Έχει γραφική ατμόσφαιρα, αλλά μοιάζει\n"
-	.string "πολύ άνετο μέρος. Τι νομίζεις;\p"
-	.string "Και παίρνεις ολόδικό σου δωμάτιο,\n"
+	.string "Έχει γραφική ατμόσφαιρα, αλλά\n"
+	.string "φαίνεται πολύ άνετο μέρος. Τι νομίζεις;\p"
+	.string "Και έχεις και δικό σου δωμάτιο,\n"
 	.string "{PLAYER}! Ας μπούμε μέσα.$"
 
 LittlerootTown_Text_WaitPlayer:
