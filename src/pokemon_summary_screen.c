@@ -310,6 +310,7 @@ static void DestroyMoveSelectorSprites(u8);
 static void SetMainMoveSelectorColor(u8);
 static void KeepMoveSelectorVisible(u8);
 static void SummaryScreen_DestroyAnimDelayTask(void);
+static int DebugAbility;
 
 // const rom data
 #include "data/text/move_descriptions.h"
@@ -1524,7 +1525,12 @@ static void Task_HandleInput(u8 taskId)
         }
         else if ((JOY_NEW(DPAD_RIGHT)) || GetLRKeysPressed() == MENU_R_PRESSED)
         {
-            ChangePage(taskId, 1);
+			if (sMonSummaryScreen->currPageIndex == PSS_PAGE_CONTEST_MOVES)
+			{
+				PlaySE(SE_FAILURE);
+				DebugAbility = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
+			}
+			ChangePage(taskId, 1);
         }
         else if (JOY_NEW(A_BUTTON))
         {
@@ -1549,6 +1555,16 @@ static void Task_HandleInput(u8 taskId)
             PlaySE(SE_SELECT);
             BeginCloseSummaryScreen(taskId);
         }
+		else if (JOY_NEW(L_BUTTON))
+		{
+			PlaySE(SE_SELECT);
+			DebugAbility--;
+		}
+		else if (JOY_NEW(R_BUTTON))
+		{
+			PlaySE(SE_SELECT);
+			DebugAbility++;
+		}
     }
 }
 
@@ -3000,6 +3016,7 @@ static void PrintInfoPageText(void)
     }
     else
     {
+		DebugAbility = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
         PrintMonOTName();
         PrintMonOTID();
         PrintMonAbilityName();
@@ -3068,13 +3085,28 @@ static void PrintMonOTID(void)
 static void PrintMonAbilityName(void)
 {
     u8 ability = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilityNames[ability], 0, 1, 0, 1);
+	if (ability == DebugAbility)
+	{
+		PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilityNames[ability], 0, 1, 0, 1);
+	}
+	else
+	{
+		PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilityNames[DebugAbility], 0, 1, 0, 1);
+	}
 }
 
 static void PrintMonAbilityDescription(void)
 {
     u8 ability = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilityDescriptionPointers[ability], 0, 17, 0, 0);
+	if (ability == DebugAbility)
+	{
+		PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilityDescriptionPointers[ability], 0, 17, 0, 0);
+	}
+	else
+	{
+		PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilityDescriptionPointers[DebugAbility], 0, 17, 0, 0);
+	}
+    
 }
 
 static void BufferMonTrainerMemo(void)
