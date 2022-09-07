@@ -1,0 +1,10 @@
+The following terminology is used in officially translated media (manuals, anime, etc.) and as such should remain the same, if possible in this translation.
+
+HP = ΠΥ (Πόντοι Υγείας / Υγεία) (Mistranslated Hit Points for Health Points? Or a compromise?)
+BRN = ΚΑΨΙΜΟ
+FRZ = ΠΑΓΩΜΑ
+CONFUSION = ΣΥΓΧΥΣΗ
+PRZ = ΠΑΡΑΛΥΣΗ
+PSN = ΔΗΛΗΤΗΡΙΑΣΗ
+BATTLE SCENE = ΣΚΗΝΕΣ ΜΑΧΗΣ
+FRAME = ΠΛΑΙΣΙΟ
