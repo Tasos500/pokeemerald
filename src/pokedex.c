@@ -4145,93 +4145,82 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
 
 static void PrintMonHeight(u16 height, u8 left, u8 top)
 {
-    u8 buffer[16];
-    u32 inches, feet;
-    u8 i = 0;
+    u8 str[9];
+    bool8 outputted = FALSE;
+    u8 result;
 
-    inches = (height * 10000) / 254;
-    if (inches % 10 >= 5)
-        inches += 10;
-    feet = inches / 120;
-    inches = (inches - (feet * 120)) / 10;
-
-    buffer[i++] = EXT_CTRL_CODE_BEGIN;
-    buffer[i++] = EXT_CTRL_CODE_CLEAR_TO;
-    if (feet / 10 == 0)
+    result = height / 1000;
+    if (result == 0)
     {
-        buffer[i++] = 18;
-        buffer[i++] = feet + CHAR_0;
+        str[0] = CHAR_SPACER;
+        outputted = FALSE;
     }
     else
     {
-        buffer[i++] = 12;
-        buffer[i++] = feet / 10 + CHAR_0;
-        buffer[i++] = (feet % 10) + CHAR_0;
+        str[0] = CHAR_0 + result;
+        outputted = TRUE;
     }
-    buffer[i++] = CHAR_SGL_QUOTE_RIGHT;
-    buffer[i++] = (inches / 10) + CHAR_0;
-    buffer[i++] = (inches % 10) + CHAR_0;
-    buffer[i++] = CHAR_DBL_QUOTE_RIGHT;
-    buffer[i++] = EOS;
-    PrintInfoScreenText(buffer, left, top);
+
+    result = (height % 1000) / 100;
+    if (result == 0 && !outputted)
+    {
+        str[1] = CHAR_SPACER;
+        outputted = FALSE;
+    }
+    else
+    {
+        str[1] = CHAR_0 + result;
+        outputted = TRUE;
+    }
+
+    str[2] = CHAR_0 + ((height % 1000) % 100) / 10;
+    str[3] = CHAR_DEC_SEPARATOR;
+    str[4] = CHAR_0 + ((height % 1000) % 100) % 10;
+	str[5] = CHAR_SPACE;
+	str[6] = CHAR_m;
+	str[7] = CHAR_PERIOD;
+    str[8] = EOS;
+    PrintInfoScreenText(str, left, top);
 }
 
 static void PrintMonWeight(u16 weight, u8 left, u8 top)
 {
-    u8 buffer[16];
-    bool8 output;
-    u8 i;
-    u32 lbs = (weight * 100000) / 4536;
+    u8 str[9];
+    bool8 outputted = FALSE;
+    u8 result;
 
-    if (lbs % 10u >= 5)
-        lbs += 10;
-    i = 0;
-    output = FALSE;
-
-    if ((buffer[i] = (lbs / 100000) + CHAR_0) == CHAR_0 && !output)
+    result = weight / 1000;
+    if (result == 0)
     {
-        buffer[i++] = CHAR_SPACER;
+        str[0] = CHAR_SPACER;
+        outputted = FALSE;
     }
     else
     {
-        output = TRUE;
-        i++;
+        str[0] = CHAR_0 + result;
+        outputted = TRUE;
     }
 
-    lbs %= 100000;
-    if ((buffer[i] = (lbs / 10000) + CHAR_0) == CHAR_0 && !output)
+    result = (weight % 1000) / 100;
+    if (result == 0 && !outputted)
     {
-        buffer[i++] = CHAR_SPACER;
+        str[1] = CHAR_SPACER;
+        outputted = FALSE;
     }
     else
     {
-        output = TRUE;
-        i++;
+        str[1] = CHAR_0 + result;
+        outputted = TRUE;
     }
 
-    lbs %= 10000;
-    if ((buffer[i] = (lbs / 1000) + CHAR_0) == CHAR_0 && !output)
-    {
-        buffer[i++] = CHAR_SPACER;
-    }
-    else
-    {
-        output = TRUE;
-        i++;
-    }
-
-    lbs %= 1000;
-    buffer[i++] = (lbs / 100) + CHAR_0;
-    lbs %= 100;
-    buffer[i++] = CHAR_PERIOD;
-    buffer[i++] = (lbs / 10) + CHAR_0;
-    buffer[i++] = CHAR_SPACE;
-    buffer[i++] = CHAR_l;
-    buffer[i++] = CHAR_b;
-    buffer[i++] = CHAR_s;
-    buffer[i++] = CHAR_PERIOD;
-    buffer[i++] = EOS;
-    PrintInfoScreenText(buffer, left, top);
+    str[2] = CHAR_0 + ((weight % 1000) % 100) / 10;
+    str[3] = CHAR_DEC_SEPARATOR;
+    str[4] = CHAR_0 + ((weight % 1000) % 100) % 10;
+	str[5] = CHAR_SPACE;
+	str[6] = CHAR_k;
+	str[7] = CHAR_g;
+    str[8] = EOS;
+    PrintInfoScreenText(str, left, top);
 }
 
 const u8 *GetPokedexCategoryName(u16 dexNum) // unused
